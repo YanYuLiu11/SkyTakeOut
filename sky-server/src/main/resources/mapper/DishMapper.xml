@@ -23,6 +23,12 @@
         from dish
         where id=#{id};
     </delete>
+    <delete id="deleteByIds">
+        delete from dish where id in 
+        <foreach collection="ids" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </delete>
     <!--    根据分类id查询菜品数量-->
     <select id="countByCategoryId" resultType="java.lang.Integer">
         select count(id)
