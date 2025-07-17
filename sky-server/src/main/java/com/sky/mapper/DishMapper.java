@@ -51,12 +51,6 @@ public interface DishMapper {
     void deleteById(Long id);
 
     /**
-     * 根据菜品id集合批量删除菜品数据
-     * @param ids
-     */
-    void deleteByIds(List<Long> ids);
-
-    /**
      * 修改菜品基本信息
      * @param dish
      */
