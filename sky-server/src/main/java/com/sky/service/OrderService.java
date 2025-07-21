@@ -73,9 +73,9 @@ public interface OrderService {
 
     /**
      * 接单
-     * @param ordersCancelDTO
+     * @param ordersConfirmDTO
      */
-    void confirm(OrdersCancelDTO ordersCancelDTO);
+    void confirm(OrdersConfirmDTO ordersConfirmDTO);
 
     /**
      * 拒单

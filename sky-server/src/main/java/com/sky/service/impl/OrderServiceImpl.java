@@ -324,13 +324,15 @@ public class OrderServiceImpl implements OrderService {
 
     /**
      * 接单
-     * @param ordersCancelDTO
+     *
+     * @param ordersConfirmDTO
      */
-    public void confirm(OrdersCancelDTO ordersCancelDTO) {
+    public void confirm(OrdersConfirmDTO ordersConfirmDTO) {
         Orders orders = Orders.builder()
-                .id(ordersCancelDTO.getId())
+                .id(ordersConfirmDTO.getId())
                 .status(Orders.CONFIRMED)
                 .build();
+
         orderMapper.update(orders);
     }
 
@@ -436,10 +438,10 @@ public class OrderServiceImpl implements OrderService {
         }
 
         Orders orders = new Orders();
-        orders.setId(orders.getId());
+        orders.setId(orderDB.getId());
 
         //更新订单状态，状态转为完成
-        orders.setStatus(Orders.CONFIRMED);
+        orders.setStatus(Orders.COMPLETED);
         orders.setDeliveryTime(LocalDateTime.now());
 
         orderMapper.update(orders);
