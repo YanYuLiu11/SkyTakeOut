@@ -59,7 +59,7 @@
 
     <select id="getByStatusAndOrderTime" resultType="com.sky.entity.Orders">
         select *
-        from orders where status=#{status} and order_time&lt;#{orderTime};
+        from orders where status = #{status} and order_time &lt; #{orderTime};
     </select>
 
     <select id="sumByMap" resultType="java.lang.Double">
