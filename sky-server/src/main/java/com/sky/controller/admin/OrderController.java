@@ -76,7 +76,7 @@ public class OrderController {
 
     /**
      * 拒单
-     *
+     * @param ordersRejectionDTO
      * @return
      */
     @PutMapping("/rejection")
